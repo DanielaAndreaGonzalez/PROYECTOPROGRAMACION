@@ -18,6 +18,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import modelo.Archivos;
 import modelo.Habitacion;
+import modelo.TipoHabitacion;
 
 /**
  * @author DanielaAGonzalezH
@@ -122,20 +123,34 @@ private ObservableList<Habitacion> lista_Habitaciones;
 		String numeroCamas = this.txtNumeroCamas.getValue();
 		String numeroBanios = this.txtNumeroBanios.getValue();
 		String descripcion = this.txtDescripcion.getText();
+		String tipohabitacion = this.txtTipoHabitacion.getValue();
 		String numeroHabitacion = this.txtNumeroHabitacion.getText();
 		int valorHora = Integer.parseInt(this.txtValorHora.getText());
 		
+		
+		TipoHabitacion t;
+		switch(tipohabitacion) {
+		case ("Suite"):
+			t = TipoHabitacion.SUITE;
+			break;
+		case ("Dobles"):
+			t = TipoHabitacion.DOBLES;
+			break;	
+		default:
+			t = TipoHabitacion.CUADRUPLES;
+		
+		}
+			
 		
 		System.out.println("número camas"+numeroCamas);
 		System.out.println("Número Banios" + numeroBanios);
 		System.out.println("Descripcion" +descripcion);
 		System.out.println("númerp habitaciones "+numeroHabitacion);
-		System.out.println("Tipo habitacion"+tipoHabitacion);
+		System.out.println("Tipo habitacion" + tipohabitacion);
 		System.out.println("Valor hora"+valorHora);
 		
-		
-		
-		Habitacion nuevaHabitacion = new Habitacion(numeroCamas, numeroBanios, descripcion, numeroHabitacion , valorHora);
+	
+		Habitacion nuevaHabitacion = new Habitacion(numeroCamas, numeroBanios, descripcion, numeroHabitacion, t, valorHora);
 		
 		this.habitacion = nuevaHabitacion;
 		System.out.println("Habitación creada con éxito " +this.habitacion.getNumeroCamas());
@@ -158,6 +173,11 @@ private ObservableList<Habitacion> lista_Habitaciones;
 		
 		this.lista_Habitaciones = listaHabitaciones;
 		//Llenado de ComboBox de número de camas
+		
+		
+		
+		for(TipoHabitacion t: TipoHabitacion.values())
+			this.tipoHabitacion.add(t.getNombre());
 		
 		
 		//this.paises =  FXCollections.observableArrayList();
@@ -191,8 +211,8 @@ private ObservableList<Habitacion> lista_Habitaciones;
 		numeroBanios.add("1");
 		numeroBanios.add("2");
 		
-		tipoHabitacion.add("suite");
-		tipoHabitacion.add("Matrimonial");
+		//tipoHabitacion.add("suite");
+		//tipoHabitacion.add("Matrimonial");
 		
 		
 		//envío de items al combobox

@@ -5,6 +5,8 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.paint.RadialGradient?>
@@ -16,9 +18,9 @@
    <top>
       <BorderPane maxHeight="500.0" maxWidth="500.0" prefHeight="1372.0" prefWidth="386.0" BorderPane.alignment="CENTER">
          <top>
-            <AnchorPane prefHeight="188.0" prefWidth="387.0" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="212.0" prefWidth="298.0" BorderPane.alignment="CENTER">
                <children>
-                  <Label fx:id="lblTituloRoyal" layoutX="112.0" layoutY="107.0" prefHeight="108.0" prefWidth="237.0" text="Hotel Royal" AnchorPane.bottomAnchor="142.0" AnchorPane.leftAnchor="112.0" AnchorPane.rightAnchor="37.0" AnchorPane.topAnchor="107.0">
+                  <Label fx:id="lblTituloRoyal" layoutX="119.0" layoutY="42.0" prefHeight="99.0" prefWidth="150.0" text="Hotel Royal" AnchorPane.bottomAnchor="71.0" AnchorPane.leftAnchor="119.0" AnchorPane.rightAnchor="118.0" AnchorPane.topAnchor="42.0">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -43,14 +45,14 @@
          <left>
             <AnchorPane maxHeight="800.0" prefHeight="257.0" prefWidth="387.0" BorderPane.alignment="CENTER">
                <children>
-                  <Label fx:id="lblTituloUsuario" layoutX="49.0" layoutY="18.0" text="Usuario">
+                  <Label fx:id="lblTituloUsuario" layoutX="39.0" layoutY="31.0" text="Usuario">
                      <font>
                         <Font name="System Bold Italic" size="12.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="txtUsuarioIngresar" blendMode="DARKEN" layoutX="112.0" layoutY="14.0" prefHeight="25.0" prefWidth="248.0" />
-                  <TextField fx:id="txtContrasenia" blendMode="DARKEN" layoutX="112.0" layoutY="76.0" prefHeight="25.0" prefWidth="248.0" />
-                  <Button fx:id="btnIngresar" layoutX="158.0" layoutY="127.0" mnemonicParsing="false" onAction="#ingresar" prefHeight="25.0" prefWidth="84.0" text="Ingresar">
+                  <TextField fx:id="txtUsuarioIngresar" blendMode="DARKEN" layoutX="112.0" layoutY="27.0" prefHeight="25.0" prefWidth="248.0" />
+                  <TextField fx:id="txtContrasenia" blendMode="DARKEN" layoutX="112.0" layoutY="97.0" prefHeight="25.0" prefWidth="248.0" />
+                  <Button fx:id="btnIngresar" layoutX="112.0" layoutY="163.0" mnemonicParsing="false" onAction="#ingresar" prefHeight="58.0" prefWidth="173.0" text="Ingresar">
                      <font>
                         <Font name="Arial Black" size="12.0" />
                      </font>
@@ -60,6 +62,16 @@
                         <Font name="System Bold Italic" size="12.0" />
                      </font>
                   </Label>
+                  <ImageView fitHeight="38.0" fitWidth="41.0" layoutX="122.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Imagenes/ingresar.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="53.0" fitWidth="99.0" layoutX="9.0" layoutY="204.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Imagenes/paisaje2.jpg" />
+                     </image>
+                  </ImageView>
                </children>
             </AnchorPane>
          </left>

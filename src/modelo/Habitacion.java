@@ -87,8 +87,10 @@ public class Habitacion {
 	 * Tipo habitacion
 	 * @return
 	 */
-	public TipoHabitacion getIdTipoHabitacion() {
-		return idTipoHabitacion;
+	public  String getIdTipoHabitacion() {
+		
+		
+		return idTipoHabitacion.toString();
 	}
 	public void setIdTipoHabitacion(TipoHabitacion idTipoHabitacion) {
 		this.idTipoHabitacion = idTipoHabitacion;
@@ -133,6 +135,25 @@ public class Habitacion {
 		this.numeroHabitacion = numeroHabitacion;
 		this.idTipoHabitacion = idTipoHabitacion;
 		this.estado = estado;
+		this.valorHora = valorHora;
+	}
+	
+	/**
+	 * @param numeroCamas
+	 * @param numeroBanios
+	 * @param descripcion
+	 * @param numeroHabitacion
+	 * @param idTipoHabitacion
+	 * @param valorHora
+	 */
+	public Habitacion(String numeroCamas, String numeroBanios, String descripcion, String numeroHabitacion,
+			TipoHabitacion idTipoHabitacion, double valorHora) {
+		super();
+		this.numeroCamas = numeroCamas;
+		this.numeroBanios = numeroBanios;
+		this.descripcion = descripcion;
+		this.numeroHabitacion = numeroHabitacion;
+		this.idTipoHabitacion = idTipoHabitacion;
 		this.valorHora = valorHora;
 	}
 	/**

@@ -100,6 +100,11 @@ public class PanelAdministradorControlador implements Initializable{
 	@FXML 
 	private MenuItem btnAcercaDe;
 	
+	@FXML 
+	private MenuItem btnModificarHabitacion;
+	
+	@FXML 
+	private MenuItem btnEliminarHabitacion;
 	
 	//Buttons
 	
@@ -178,6 +183,7 @@ public class PanelAdministradorControlador implements Initializable{
 		this.lista_Habitaciones = FXCollections.observableArrayList();
 		this.tblTablaHabitaciones.setItems(lista_Habitaciones);
 		this.archivoHabitacion = new Archivos(ARCHIVO_HABITACIONES);
+		
 		
 		
 		this.colNumeroHabitacion.setCellValueFactory(new PropertyValueFactory<>("numeroHabitacion"));

@@ -8,15 +8,16 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="423.0" prefWidth="623.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.PanelAdministradorControlador">
    <children>
-      <AnchorPane blendMode="SRC_ATOP" layoutX="-2.0" maxHeight="573.0" maxWidth="642.0" prefHeight="573.0" prefWidth="642.0">
+      <AnchorPane blendMode="SRC_ATOP" layoutX="-1.0" maxHeight="587.0" maxWidth="642.0" prefHeight="587.0" prefWidth="642.0">
          <children>
-            <Label fx:id="lblTituloIdentificacion" layoutX="323.0" layoutY="69.0" text="Identificación:">
+            <Label fx:id="lblTituloIdentificacion" layoutX="320.0" layoutY="90.0" text="Identificación:">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Label>
@@ -30,7 +31,7 @@
                   <Font name="System Bold" size="12.0" />
                </font></Label>
             <TextField fx:id="txtUsuario" blendMode="HARD_LIGHT" depthTest="DISABLE" layoutX="416.0" layoutY="166.0" />
-            <TableView fx:id="tblTablaHabitaciones" layoutX="36.0" layoutY="247.0" prefHeight="213.0" prefWidth="605.0">
+            <TableView fx:id="tblTablaHabitaciones" layoutX="21.0" layoutY="247.0" prefHeight="213.0" prefWidth="600.0">
               <columns>
                 <TableColumn fx:id="colNumeroHabitacion" editable="false" prefWidth="134.0" text="Numero Habitacion" />
                 <TableColumn fx:id="colTipoHabitacion" prefWidth="122.0" text="Tipo Habitacion" />
@@ -39,11 +40,13 @@
                   <TableColumn fx:id="colValorhora" prefWidth="122.0" text="Valor hora" />
               </columns>
             </TableView>
-            <MenuBar layoutX="36.0" layoutY="222.0">
+            <MenuBar layoutX="21.0" layoutY="222.0">
               <menus>
-                <Menu fx:id="btnCrearHabitacion" mnemonicParsing="false" text="Crear Habitación">
+                <Menu fx:id="btnCrearHabitacion" mnemonicParsing="false" text="Habitación">
                      <items>
                         <MenuItem mnemonicParsing="false" onAction="#crearHabitacion" text="Crear Habitacion" />
+                        <MenuItem fx:id="btnModificarHabitacion" mnemonicParsing="false" text="Modificar Habitacion" />
+                        <MenuItem fx:id="btnEliminarHabitacion" mnemonicParsing="false" text="Eliminar Habitacion" />
                      </items></Menu>
                 <Menu fx:id="btnAcercaDe" mnemonicParsing="false" text="Acerca de">
                   <items>
@@ -52,13 +55,22 @@
                 </Menu>
               </menus>
             </MenuBar>
-            <Button fx:id="btnCerrarSesion" layoutX="535.0" layoutY="22.0" mnemonicParsing="false" onAction="#cerrarSesion" text="Cerrar Sesion" textAlignment="RIGHT" textOverrun="CENTER_ELLIPSIS">
+            <Button fx:id="btnCerrarSesion" layoutX="452.0" layoutY="22.0" mnemonicParsing="false" onAction="#cerrarSesion" prefHeight="44.0" prefWidth="174.0" text="Cerrar Sesion" textAlignment="RIGHT" textOverrun="CENTER_ELLIPSIS">
                <font>
                   <Font name="System Bold Italic" size="12.0" />
                </font>
             </Button>
-            <TextField fx:id="txtIdentificacion" blendMode="HARD_LIGHT" depthTest="ENABLE" layoutX="416.0" layoutY="65.0" />
-            <StackPane layoutX="56.0" layoutY="35.0" prefHeight="150.0" prefWidth="200.0" />
+            <TextField fx:id="txtIdentificacion" blendMode="HARD_LIGHT" depthTest="ENABLE" layoutX="416.0" layoutY="86.0" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="46.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagenes/User.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="44.0" fitWidth="36.0" layoutX="463.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Descargas/emergency-exit-g8f6d81c4c_640.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </children>

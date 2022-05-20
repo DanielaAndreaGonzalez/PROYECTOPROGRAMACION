@@ -3,6 +3,8 @@
  */
 package modelo;
 
+import java.util.ArrayList;
+
 /**
  * @author DanielaAGonzalezH
  * clase enumerada la cual contiene lo diferentes tipos de habitación que hay en el hotel
@@ -23,9 +25,9 @@ public enum TipoHabitacion {
 	
 	//Declaración de variables
 	
-	protected String id;
-	protected String nombre;
-	protected String descripcion;
+	private String id;
+	private String nombre;
+	private String descripcion;
 	
 	/**
 	 * Id
@@ -68,6 +70,12 @@ public enum TipoHabitacion {
 		this.id = id;
 		this.nombre = nombre;
 		this.descripcion = descripcion;
+	}
+	/**
+	 * @param nombre
+	 */
+	private TipoHabitacion(String nombre) {
+		this.nombre = nombre;
 	}
 	
 	

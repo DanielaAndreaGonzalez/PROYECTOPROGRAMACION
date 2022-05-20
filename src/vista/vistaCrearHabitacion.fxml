@@ -4,14 +4,16 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="458.0" prefWidth="522.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.PanelCrearHabitacionControlador">
    <children>
-      <AnchorPane layoutX="-12.0" layoutY="-17.0" maxHeight="475.0" maxWidth="550.0" prefHeight="475.0" prefWidth="550.0">
+      <AnchorPane layoutX="-12.0" maxHeight="499.0" maxWidth="550.0" prefHeight="458.0" prefWidth="550.0">
          <children>
-            <Label fx:id="lblTituloCrearHabitacion" alignment="CENTER" contentDisplay="CENTER" layoutX="138.0" layoutY="17.0" prefHeight="48.0" prefWidth="219.0" text="CREAR HABITACIÓN">
+            <Label fx:id="lblTituloCrearHabitacion" alignment="CENTER" contentDisplay="CENTER" layoutX="138.0" layoutY="17.0" prefHeight="48.0" prefWidth="243.0" text="CREAR HABITACIÓN">
                <font>
                   <Font name="Arial Bold" size="20.0" />
                </font>
@@ -27,8 +29,18 @@
             <TextField fx:id="txtDescripcion" layoutX="224.0" layoutY="167.0" prefHeight="25.0" prefWidth="192.0" />
             <ComboBox fx:id="txtTipoHabitacion" layoutX="224.0" layoutY="241.0" prefHeight="25.0" prefWidth="192.0" />
             <TextField fx:id="txtValorHora" layoutX="225.0" layoutY="276.0" prefHeight="25.0" prefWidth="192.0" />
-            <Button fx:id="btnCrearHabitacion" layoutX="222.0" layoutY="353.0" mnemonicParsing="false" onAction="#guardarHabitacion" text="Crear Habitacion" />
+            <Button fx:id="btnCrearHabitacion" layoutX="224.0" layoutY="352.0" mnemonicParsing="false" onAction="#guardarHabitacion" prefHeight="57.0" prefWidth="192.0" text="Crear Habitacion" />
             <TextField fx:id="txtNumeroHabitacion" layoutX="223.0" layoutY="203.0" prefHeight="25.0" prefWidth="192.0" />
+            <ImageView fitHeight="36.0" fitWidth="34.0" layoutX="231.0" layoutY="363.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagenes/guardar.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="83.0" fitWidth="99.0" layoutX="440.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagenes/habitacion2.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </children>

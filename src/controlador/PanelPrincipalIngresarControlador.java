@@ -50,7 +50,9 @@ public class PanelPrincipalIngresarControlador implements Initializable {
 	private Button btnIngresar;
 	
 	
-	
+	/**
+	 * Método ingresar, abre la ventana correspondiente a cada usuario
+	 */
 	
 	@FXML
 	public void ingresar() {
@@ -65,7 +67,7 @@ public class PanelPrincipalIngresarControlador implements Initializable {
 				stage.initModality(Modality.APPLICATION_MODAL);
 				//stage.initStyle(StageStyle.UNDECORATED);
 				stage.initStyle(StageStyle.UTILITY);
-				//stage.setTitle("Crear Habitación");
+				stage.setTitle("Panel Administrador");
 				stage.setScene(new Scene(root1));	
 				stage.showAndWait();	
 			} catch (Exception e) {
@@ -84,8 +86,9 @@ public class PanelPrincipalIngresarControlador implements Initializable {
 					stage.initModality(Modality.APPLICATION_MODAL);
 					//stage.initStyle(StageStyle.UNDECORATED);
 					stage.initStyle(StageStyle.UTILITY);
-					stage.setTitle("Crear Habitación");
+					stage.setTitle("Crear Reserva");
 					stage.setScene(new Scene(root1));	
+					stage.showAndWait();
 				} catch (Exception e) {
 					e.printStackTrace();
 			  }
@@ -94,6 +97,10 @@ public class PanelPrincipalIngresarControlador implements Initializable {
 	   }
 		
    }
+	
+	
+	
+	
 	
 	
 	@Override
